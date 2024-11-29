@@ -1,5 +1,6 @@
 import { render } from 'solid-js/web'
 import Button from '@/entrypoints/chapter.content/Button'
+import './style.css'
 
 export default defineContentScript({
   matches: ['*://www.qidian.com/chapter/*'],

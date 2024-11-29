@@ -1,6 +1,7 @@
 import store from '@/entrypoints/utils/store'
 import pLimit from 'p-limit'
 import { getAudio } from '@/entrypoints/utils/azure'
+import { css } from '@/styled-system/css'
 
 const concurrency = 3
 
@@ -83,6 +84,10 @@ export class Reader {
   }
 }
 
+const bgClass = css({
+  backgroundColor: 'red.300'
+})
+
 class Task {
   private readonly audioPromise: Promise<Blob>
 
@@ -130,9 +135,9 @@ class Task {
   }
 
   private setBackgroundColor(el: HTMLAudioElement) {
-    this.textNode.style.backgroundColor = '#ff000022'
+    this.textNode.classList.add(bgClass)
     const f = () => {
-      this.textNode.style.backgroundColor = ''
+      this.textNode.classList.remove(bgClass)
       el.removeEventListener('ended', f)
     }
     el.addEventListener('ended', f)

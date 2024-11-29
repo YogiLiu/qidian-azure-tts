@@ -11,12 +11,12 @@ const Status: Component<Props> = (props) => {
   return (
     <>
       <Show when={props.speeching}>
-        <LoaderCircle class={css({ animation: 'spin' })} />
-        <span>阅读中</span>
+        <LoaderCircle class={css({ animation: 'spin' }) + ' text-24px'} />
+        <span class='text-bo4 text-s-gray-500 mt-2px group-hover:text-primary-red-500'>阅读中</span>
       </Show>
       <Show when={!props.speeching}>
-        <Speech />
-        <span>阅读</span>
+        <Speech class='text-24px' />
+        <span class='text-bo4 text-s-gray-500 mt-2px group-hover:text-primary-red-500'>阅读</span>
       </Show>
     </>
   )

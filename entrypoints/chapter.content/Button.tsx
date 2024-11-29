@@ -1,6 +1,5 @@
 import { Component, createSignal, JSX } from 'solid-js'
 import Status from '@/entrypoints/chapter.content/Status'
-import './style.css'
 import { Reader } from '@/entrypoints/chapter.content/speech'
 import { createAsync } from '@solidjs/router'
 
