@@ -1,9 +1,9 @@
 import { Component, createResource, JSX, Suspense, For, Show } from 'solid-js'
-import store from '@/entrypoints/libs/store'
+import store from '@/entrypoints/utils/store'
 import LoaderCircle from 'lucide-solid/icons/loader-circle'
 import AudioLines from 'lucide-solid/icons/audio-lines'
 import { css } from '@/styled-system/css'
-import { getAudio, getVoices } from '@/entrypoints/libs/azure'
+import { getAudio, getVoices } from '@/entrypoints/utils/azure'
 import { action, createAsync } from '@solidjs/router'
 
 const initialText = 'I can eat glass.\n我能吞下玻璃而不伤身体。'

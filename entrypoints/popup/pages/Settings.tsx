@@ -1,7 +1,7 @@
 import { Component, createUniqueId, JSX } from 'solid-js'
 import { css } from '@/styled-system/css'
 import { createAsync } from '@solidjs/router'
-import store from '@/entrypoints/libs/store'
+import store from '@/entrypoints/utils/store'
 import Eye from 'lucide-solid/icons/eye'
 import EyeOff from 'lucide-solid/icons/eye-off'
 import { Dynamic } from 'solid-js/web'

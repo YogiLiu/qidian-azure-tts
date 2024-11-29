@@ -1,5 +1,5 @@
 import { storage } from 'wxt/storage'
-import { getVoices } from '@/entrypoints/libs/azure'
+import { getVoices } from '@/entrypoints/utils/azure'
 
 const region = storage.defineItem<string>('local:azure:region', {
   fallback: 'eastasia',
