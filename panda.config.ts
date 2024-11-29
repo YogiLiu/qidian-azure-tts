@@ -19,5 +19,5 @@ export default defineConfig({
   outdir: 'styled-system',
 
   // What JSX framework to use
-  jsxFramework: 'solid'
+  jsxFramework: 'solid',
 })

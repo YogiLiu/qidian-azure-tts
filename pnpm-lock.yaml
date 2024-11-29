@@ -16,6 +16,9 @@ importers:
       lucide-solid:
         specifier: ^0.460.0
         version: 0.460.0(solid-js@1.9.3)
+      p-limit:
+        specifier: ^6.1.0
+        version: 6.1.0
       solid-js:
         specifier: ^1.9.3
         version: 1.9.3
@@ -3867,6 +3870,13 @@ packages:
       }
     engines: { node: '>=10' }
 
+  p-limit@6.1.0:
+    resolution:
+      {
+        integrity: sha512-H0jc0q1vOzlEk0TqAKXKZxdl7kX3OFUzCnNVUnq5Pc3DGo0kpeaMuPqxQn235HibwBEb0/pm9dgKTjXy66fBkg==,
+      }
+    engines: { node: '>=18' }
+
   p-locate@5.0.0:
     resolution:
       {
@@ -5181,6 +5191,13 @@ packages:
         integrity: sha512-rVksvsnNCdJ/ohGc6xgPwyN8eheCxsiLM8mxuE/t/mOVqJewPuO1miLpTHQiRgTKCLexL4MeAFVagts7HmNZ2Q==,
       }
     engines: { node: '>=10' }
+
+  yocto-queue@1.1.1:
+    resolution:
+      {
+        integrity: sha512-b4JR1PFR10y1mKjhHY9LaGo6tmrgjit7hxVIeAmyMw3jegXR4dhYqLaQF5zMXZxY7tLpMyJeLjr1C4rLmkVe8g==,
+      }
+    engines: { node: '>=12.20' }
 
   zip-dir@2.0.0:
     resolution:
@@ -7436,6 +7453,10 @@ snapshots:
     dependencies:
       yocto-queue: 0.1.0
 
+  p-limit@6.1.0:
+    dependencies:
+      yocto-queue: 1.1.1
+
   p-locate@5.0.0:
     dependencies:
       p-limit: 3.1.0
@@ -8271,6 +8292,8 @@ snapshots:
       fd-slicer: 1.1.0
 
   yocto-queue@0.1.0: {}
+
+  yocto-queue@1.1.1: {}
 
   zip-dir@2.0.0:
     dependencies:

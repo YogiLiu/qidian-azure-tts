@@ -168,7 +168,13 @@ const Speech: Component = () => {
             />
             <div class={css({ display: 'flex', justifyContent: 'right' })}>
               <Show when={playing()}>
-                <LoaderCircle class={css({ animation: 'spin', height: '4', color: 'zinc.300' })} />
+                <LoaderCircle
+                  class={css({
+                    animation: 'spin',
+                    height: '4',
+                    color: 'zinc.300',
+                  })}
+                />
               </Show>
               <Show when={!playing()}>
                 <button
