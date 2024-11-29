@@ -8,12 +8,18 @@ type Voice = {
 const timeout = 10000
 
 const getEndpoint = (region: string, path?: string): string => {
+  if (!region) {
+    throw new Error('region is required')
+  }
   region = encodeURIComponent(region)
   path = path || ''
   return `https://${region}.tts.speech.microsoft.com${path}`
 }
 
 const createHeaders = (key: string): Record<string, string> => {
+  if (!key) {
+    throw new Error('key required')
+  }
   return {
     'Ocp-Apim-Subscription-Key': key,
   }

@@ -17,16 +17,24 @@ const Button: Component = () => {
       return
     }
     if (speeching()) {
-      setSpeeching(false)
-      await reader()!.pause()
+      try {
+        await reader()!.pause()
+        setSpeeching(false)
+      } catch (e) {
+        console.error(e)
+      }
     } else {
-      setSpeeching(true)
-      if (!initialized()) {
-        await reader()!.init()
-        setInitialized(true)
-        await reader()!.play()
-      } else {
-        await reader()!.resume()
+      setInitialized(true)
+      try {
+        if (!initialized()) {
+          await reader()!.init()
+          await reader()!.play()
+        } else {
+          await reader()!.resume()
+        }
+      } catch (e) {
+        setInitialized(false)
+        console.error(e)
       }
     }
   }
